@@ -1,0 +1,6 @@
+@APIHatos_HostAddress = http://localhost:5075
+
+GET {{APIHatos_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
