@@ -1,0 +1,9 @@
+
+<div *ngFor="let jatekos of gamers" class="row">
+    <div class="col">
+        {{jatekos.name}}
+        <button type="button" class="btn btn-primary">Tippek</button>
+    </div>
+    <app-tippek [tippek]="jatekos.tipp"></app-tippek>
+
+</div>

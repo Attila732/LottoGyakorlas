@@ -1,0 +1,25 @@
+
+<div class="row">
+    <div *ngFor="let o of oszlopok" class="col">{{o}}</div>
+    <div class="col">Műveletek</div>
+</div>
+<div class="row my-2" >
+    <div *ngFor="let o of oszlopok" class="col">
+        <input [(ngModel)]="newTipp[o]" type="number" class="form-control">
+
+    </div>
+    <div class="col">
+        <button (click)="createTipp()" type="button" class="btn btn-primary">Create</button>
+    </div>
+</div>
+
+<div class="row my-2" *ngFor="let tipp of tippek">
+    <div *ngFor="let o of oszlopok" class="col">
+        <input [(ngModel)]="tipp[o]" type="number" class="form-control">
+
+    </div>
+    <div class="col">
+        <button type="button" (click)="updateTipp(tipp)" class="btn btn-primary">Mentés</button>
+        <button type="button" (click)="deleteTipp(tipp)" class="btn btn-primary">Törlés</button>
+    </div>
+</div>
